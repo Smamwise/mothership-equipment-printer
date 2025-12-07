@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Statblock generator for MOSH</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<section class="input-container noPrint">
+            <div>
+				<h3>MOSH statblock editor</h3>
+			</div>
+			<div>
+				<button class="contentButton" id="randomWeaponButton">Weapon</button>
+				<button class="contentButton" id="randomArmorButton">Armor</button>
+				<button class="contentButton" id="randomItemButton">Item</button>
+				<button class="contentButton" id="randomCyberwareButton">Cyberware</button>
+				<button class="contentButton" id="print">Save as pdf</button>
+			</div>
+			<div class="dropdownMenu">
+				<select class="dropdownSelect" id="contentSelect"></select>
+			</div>
+		</section>
+		<section class="content-block" id="contentBlock">
+			<div class="content-title" id="contentTitle" contenteditable="true"></div>
+			<div class="content-type" id="contentType" contenteditable="true"></div>
+			<div class="content-image" id="contentImage">
+				<div id="contentImageContainer">
+					<img id="contentImg" src="" alt="content">
+					<input type="text" id="contentImgInput" value="" style="display: none; position: absolute;">
+				</div>
+			</div>
+			<table class="content-stats" id="contentStats">
+			</table>
+		</section>
+		<script src="data.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>

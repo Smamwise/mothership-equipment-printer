@@ -1,0 +1,132 @@
+:root {
+		--content-block-height: 600px; /* fallback default */
+	}
+body {
+	font-family: 'League Spartan';
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: calc(100vw - 100%);
+}
+
+.contentButton {
+	text-align: justify;
+	background-color: lightgray;
+	border-radius: 8px;
+	border-width: 0;
+	color: #000000;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 5px 5px;
+	text-align: center;
+	transition: all 200ms;
+	vertical-align: baseline;
+	white-space: nowrap;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.contentButton:hover {
+	background-color: black;
+	color: white;
+  }
+
+.input-container {
+	margin-bottom: 20px;
+	width: 365px;
+	text-align: center;
+}
+
+.dropdownMenu {
+	margin-top: 10px;
+}
+
+.dropdownSelect {
+	width: 300px;
+}
+
+.content-block {
+	width: 375px;
+	--height: auto;
+	border: 10px solid black;
+	background-color: white;
+	overflow: visible;
+}
+.content-title {
+	border: 1px solid black;
+	color: white;
+	background-color: black;
+	text-align: center;
+	padding: 10px 10px 5px;
+	font-size: 28px;
+	font-weight: bold;
+	align-items: center;
+}
+.content-type {
+	border: 1px solid black;
+	color: white;
+	background-color: black;
+	padding: 5px 10px;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 0;
+}
+.content-image {
+	display: grid;
+    place-items: center;
+	border-bottom: 3px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.content-image img {
+
+	max-width: 373px;
+	max-height: 373px;
+}
+.content-stats {
+	width: 375px;
+	border: none;
+	border-collapse: collapse;
+	text-align: left;
+	table-layout: fixed;
+	font-size: 18px;
+}
+.content-stats td {
+	padding: 8px;
+	border: 1px solid black;
+	vertical-align: top;
+	display: flexbox;
+}
+.content-stats td:first-child {
+	width: 70px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.content-stats tr:first-child td {
+	font-weight: normal;
+}
+.content-stats tr td:first-child {
+	font-weight: bold;
+}
+.content-stats tr:last-child td.special {
+	white-space: normal; 
+	word-wrap: break-word;
+	min-height: 50px;
+	height: auto;
+	overflow: visible;
+}
+@media print {
+    .noPrint { display: none; }
+	@page {
+		size: 400px var(--content-block-height);
+		margin: 2px;
+	  }
+} 
