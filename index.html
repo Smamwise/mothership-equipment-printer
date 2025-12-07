@@ -27,8 +27,12 @@
 			<div class="content-type" id="contentType" contenteditable="true"></div>
 			<div class="content-image" id="contentImage">
 				<div id="contentImageContainer">
-					<img id="contentImg" src="" alt="content">
-					<input type="text" id="contentImgInput" value="" style="display: none; position: absolute;">
+					<img id="contentImg" src="" alt="content" loading="lazy">
+					<input type="text" id="contentImgInput" value="" aria-label="Image URL" style="display: none; position: absolute;">
+					<!-- spinner shown while image loads -->
+					<div id="contentSpinner" class="spinner" role="status" aria-live="polite" aria-hidden="true" style="display:none"></div>
+					<!-- live region for screen readers -->
+					<div id="contentSpinnerLive" class="visually-hidden" aria-live="polite"></div>
 				</div>
 			</div>
 			<table class="content-stats" id="contentStats">

@@ -91,6 +91,40 @@ body {
 	max-width: 373px;
 	max-height: 373px;
 }
+
+/* visually-hidden utility for accessibility */
+.visually-hidden {
+	position: absolute !important;
+	height: 1px; width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+	border: 0; padding: 0; margin: -1px;
+}
+
+/* position the inner container so spinner can be absolutely positioned */
+#contentImageContainer {
+	position: relative;
+}
+
+/* simple CSS spinner centered over image */
+.spinner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+	width: 36px;
+	height: 36px;
+	border: 4px solid rgba(0,0,0,0.15);
+	border-top-color: #000;
+	border-radius: 50%;
+	z-index: 20;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	to { transform: translate(-50%, -50%) rotate(360deg); }
+}
 .content-stats {
 	width: 375px;
 	border: none;
