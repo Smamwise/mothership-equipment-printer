@@ -167,7 +167,7 @@ function updateContent(selectedKey) {
 
     // Update image (use fallback when the data entry has no image key)
     const imgKey = attributes[7];
-    const imagepath = imgKey ? `./images/${imgKey}.png` : './images/missing.png';
+    const imagepath = imgKey ? `./images/${imgKey}.png` : null;
     setImageSrc(imagepath);
     if (contentImgInput) contentImgInput.value = imagepath;
 
